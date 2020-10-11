@@ -1,0 +1,10 @@
+CREATE TABLE maoyan_movie_detail (
+  nid BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  movie_name VARCHAR(100) NOT NULL DEFAULT '-' COMMENT '电影名称',
+  movie_type VARCHAR(100) NOT NULL DEFAULT '-' COMMENT '电影类型',
+  movie_time VARCHAR(20) NOT NULL DEFAULT '-' COMMENT '上映时间',
+  update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新记录时间',
+  PRIMARY KEY (nid),
+  KEY idx_name (movie_name),
+  KEY idx_type (movie_type)
+) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
